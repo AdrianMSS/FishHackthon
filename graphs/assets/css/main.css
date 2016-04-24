@@ -1,0 +1,33 @@
+/*
+ * Author: Adrián Sánchez
+ */
+body{
+	margin: 0px;
+    background: url(../img/back.png) repeat;
+}
+.header{
+	text-align: center;
+}
+.header div{
+	position: relative;
+}
+h1{
+	color:blue;
+}
+.img-responsive{
+	max-width: 100%;
+}
+.chart{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aliceblue;
+    height: 400px;
+}
+.headerRow{
+	background-color: rgba(0,0,0,0.3);
+    padding-top: 2%;
+}
+.headerRow img{
+    max-width: 100%;
+}
