@@ -107,7 +107,9 @@ function calculateAndDisplayRoute(directionsService, num, markersShow, placesDB)
       
       //En caso de llegar al final modifica el texto de distancia y procede a dibujar el mapa de calor 
       else{
+        var consumption = distance * 0.87 / 1000;
         $('#distanceText').text(formatNumber(distance) + ' metros.');
+        $('#gasText').text(formatNumber(consumption) + ' litros.');
         heatMap();
       }
     } else {

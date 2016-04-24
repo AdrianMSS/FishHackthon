@@ -75,13 +75,13 @@ exports.newPosition = function(req, res) {
 
 //GET State
 exports.getState = function(req,res) {
-    db.collection('State').findOne({_id:1}, function(error, doc){
+    db.collection('State').findAndModify({_id:1},{},{$set:{emergency:false, pirates:false}},function(error, doc) {
         if(error) {
             throw error;
             res.send(400, error);
         }
         else{
-            res.send(200, doc);
+            res.send(200, doc.value);
         }
     });
 }
